@@ -404,8 +404,38 @@ section:nth-child(7) h3{
 .red-btn:hover{
     background-color: var(--btn-hover);
 }
+/** main-plan i main-signUp */
+.signUp #main-plan, .signUp #main-signUp {
+    text-align: left;
+    & h2{
+        font-size: .9rem;
+        font-weight: normal;
+    }
+    & article{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        & h3{
+            font-size: 32px;
+            font-weight: lighter;
+            text-align: left;
+        }
+        & >a{
+            padding: 1rem;
+            width: 100%;
+            font-size: 1.5rem;
+            background-color: var(--btn-color);
+            color: var(--font-color);
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        & >a:hover{
+            background-color: var(--btn-hover);
+        }
 
-
+    }
+}
 /** Alba SIGNUP */
 .signUp{
     background-color: #fff;
@@ -431,12 +461,8 @@ section:nth-child(7) h3{
     }
 }
 /* SIGNUP Main */
-.signUp i{
-    color: var(--btn-color);
-}
 .signUp #main-signUp {
     padding: 6rem 3rem;
-    text-align: left;
     & span{
         order: 0;
         font-size: 3.2rem;
@@ -490,6 +516,10 @@ section:nth-child(7) h3{
 
     }
 }
+.signUp i{
+    color: var(--btn-color);
+}
+
 /* SIGNUP footer */
 .signUp footer{
     background-color: var(--bg-footer-signUp);
@@ -501,21 +531,70 @@ section:nth-child(7) h3{
     }
 }
 /** Alba main plan */
-#main-plan .tab{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: .5rem;
-    & .tablinks{
-        padding: 0.5rem;
-        border-radius: 15px;
-        border: 1px solid var(--border-input);
-    }
-    & .tablinks.active {
-        background-color: var(--btn-color);
-        color: var(--font-color);
-    }
+.signUp #main-plan{
+    padding: 6rem 1rem;
+    & article{
+        & section{
+            border: 1px solid var(--font-footer-signUp);
+            border-radius: 10px;
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            & header{
+                display: flex;
+                flex-direction: column;
+                background: radial-gradient(circle, rgba(255,106,0,1) 0%, rgba(255,113,0,1) 22%, rgba(255,136,0,1) 69%, rgba(253,200,54,1) 100%);                padding: 1rem;
+                border-radius: 8px;
+                & p:first-child{
+                    font-weight: bold;
+                    color: var(--font-color);
+                }
+                & p:last-child{
+                    font-weight: 0.5rem;
+                    color: wheat;
+                }
 
+            }
+            & div{
+                border-bottom: 1px solid var(--font-footer-signUp);
+                color: var(--faq-hover);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-bottom: 0.2rem;
+                & p:first-child{
+                    font-weight: bold;
+                    color: var(--font-footer-signUp);
+                    font-size: 0.8rem;
+                }
+                & p:last-child{
+                    text-align: right;
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                }
+            }
+            & div:last-of-type{
+                border-bottom: transparent;
+            }
+    
+        }
+        & section:hover, .active section{
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+            /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        & >p{
+            font-size: 0.8rem;
+            width: 90%;
+            margin: auto;
+            line-height: 1.5;
+        }
+    }
 }
+
+
 /**Albaaa mediaqueries*/
 @media only screen and (min-width: 768px){
     .signUp header{
@@ -527,12 +606,9 @@ section:nth-child(7) h3{
             padding: 1rem;
         }
     }
-    .signUp main{
+    .signUp #main-signUp {
         width: 400px;
         margin: auto;
-        & h3, > span{
-            text-align: center;
-        }
     }
     .signUp footer{
         padding: 1rem 2rem;
@@ -541,6 +617,15 @@ section:nth-child(7) h3{
             padding-top: 1rem;
             grid-template-columns: repeat(4, 1fr);
 
+        }
+    }
+
+    .signUp #main-plan{
+        width: 70%;
+        margin: auto;
+        line-height: 1.5;
+        & article{
+            gap:2rem;
         }
     }
 }
@@ -552,6 +637,8 @@ section:nth-child(7) h3{
     }
 
 }
+
+
 
 
 /**EDU mediaqueries*/
@@ -638,7 +725,6 @@ section:nth-child(7) h3{
 
 /*? MARC */
 /** Login */
-
 .bodyLogin{
     background-color: var(--bg-color);
 }
