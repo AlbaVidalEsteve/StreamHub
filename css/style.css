@@ -1,0 +1,570 @@
+/* 
+
+*EDU    
+    TODO: mediaquieries;
+    TODO: footer;
+    TODO: background header;
+    
+*ALBA
+    TODO: Arreglar nav; 
+    done: position banner "flotant";
+    done: botones FAQs js; 
+    done: filter background header i section 1
+    
+
+*MARC
+    TODO: Comprobar paddings de p en sections i faqs;
+    todo: login
+
+*CONJUNT
+TODO: Español; label & mediaquearies;
+
+
+
+*/
+
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    height: 100%;
+    --bg-color:#000000;
+    --border-section: #232323;
+    --font-color:#FFFFFF;
+    --soft-white: rgba(255,255,255,0.7);
+    /* Red buttons */
+    /* --btn-color:#E50914; */
+    --btn-color:#ff8800;
+    /* --primary-color: #ffb300; */
+    /* --btn-hover:#C11119; */
+    --btn-hover:#fda036;
+    /* Input */
+    --bg-input: #0F0F0F;
+    --border-input:#777676 ;
+    /* FAQs */
+    --faq-dark:#2D2D2D;
+    --faq-hover:#414141;
+    /* Gradient */
+    /* --gradient-color-1: #890F33; */
+    /* --gradient-color-2: #101B4E; */
+    --gradient-color-2: #ff8800;
+    --gradient-color-1: #a41000;
+    --gradient-color-3: #000413;
+    /* SignUp */
+    --bg-footer-signUp: #f3f3f3;
+    --font-footer-signUp: #737373;
+}
+
+
+/**Body*/
+body{
+    font: 16px/1.5rem;
+    color: var(--font-color);
+    height: 100vh;
+    width: 100%;
+    /* max-width: 1920px; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#velo{
+    position: absolute;
+    width: 100vw;
+    height: 700px;
+    z-index: -1;
+    background: rgb(2,0,36); 
+    background: radial-gradient(circle, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 100%); 
+}
+#background{
+    position: absolute;
+    width: 100vw;
+    height: 700px;
+    z-index: -2;
+    background: url(../Material/Netflix-1280x720.jpg);
+}
+
+/*!Alba*/
+/** Tabs GENERAL*/ 
+.select{
+    position: relative;
+    cursor: pointer;
+}
+.contenido{
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+    transition: 0.7s;
+    background-color: var(--faq-dark);
+    & p{
+        font-size: 1rem;
+        line-height: 1.5;
+        padding-bottom: 0.5rem;
+    }
+}
+.activa .contenido{
+    padding: 1em;
+    
+}
+.activa .contenido{
+    height: auto; /*se puede poner auto */
+}
+/* TABS FAQS */
+section:nth-child(7) h3:hover{
+    background-color: var(--faq-hover);
+}
+section:nth-child(7) h3::before{
+    content: '+';
+    position: absolute;
+    right: 1rem;
+}
+section:nth-child(7) h3{
+    background-color: var(--faq-dark);
+    padding: 1rem;
+    border-bottom: 1px solid var(--bg-color) ;
+}
+
+.activa section:nth-child(7) h3::before{
+    content: '-';
+}
+/*TAB idioma*/
+.idioma .contenido{
+    /* padding: 0.2rem; */
+    position: relative; /*!arreglar*/
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    & a{
+        padding: 0.5rem;
+        color: var(--font-color);
+        text-decoration: none;
+    }
+    & a:hover{
+        background-color: var(--faq-hover);
+    }
+}
+
+/** Header */
+header{
+    flex: 0 0 auto;
+    width: 100%;
+    & h1{ /*?Canviar por un logo*/
+        width: 100%;
+         /* !Afegeixo padding */
+        padding: 1rem 0 0 1rem;
+        color: var(--btn-color);
+        text-align: left;
+    } 
+}
+
+
+/** Nav */ /*ALBA*/
+nav ul{
+    /* !Afegeixo padding */
+    padding: .5rem 0 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 110px);
+    grid-auto-rows: 128px;
+    align-content: start;
+    /* display: flex;
+    flex-flow: row wrap; */
+    width: 100vw;
+    /* align-items: center; */
+    justify-content: left;
+    gap: .5rem;
+    list-style-type: none;
+    & li select{
+        background-color: var(--bg-input);
+        color: var(--font-color);
+        border: 1px solid var(--border-input);
+        padding: .5rem;
+        border-radius: 5px;
+    }
+
+    & li:last-child a{
+        background-color: var(--btn-color);
+        color: var(--font-color);
+        padding: .5rem;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+}
+
+/** Main */
+main section{
+    display: flex;
+    flex-direction: column;
+}
+main section:first-of-type, main section:nth-child(2){
+    border: none;
+    background-color: transparent;
+}
+main section:first-of-type{
+    padding-bottom: 6rem;
+    padding-top: 0; /**Alba*/
+    /* background: url(../Material/Netflix-1280x720.jpg);
+    background-size: cover;
+    position: relative; */
+}
+main .banner{
+    background-image: radial-gradient(ellipse at top, #ce0a1e, #bb003d, #9d0052, #77005d, #4d175e, #351b57, #1f1b4c, #0a183f, #081534, #081129, #050b1e, #000413);
+    text-align: left;
+    display: grid; 
+    margin: auto;
+    justify-content: center;  
+    width: 90%;
+    border-radius: 5px;
+    position: relative;
+    bottom: 5rem;
+    line-height: 2rem;
+    
+}
+
+main{
+    
+    display: flex;
+    flex-direction: column;
+    & section{
+        width: 100%;
+        padding: 2rem 1.4rem;
+        border-bottom: 10px solid var(--border-section);
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        & h2{
+            padding: 1rem 0;
+            font-size: 2.2rem ;
+        }
+        & p{
+            font-size: 1.1rem;
+        }
+        & figure{
+            width: 100%;
+            & img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+main section:nth-child(7){
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    /* & h3{
+        position: relative;
+        cursor: pointer;
+        background-color: var(--faq-dark);
+        padding: 1rem;
+        border-bottom: 1px solid var(--bg-color) ;
+    }
+    & h3:hover{
+        background-color: var(--faq-hover);
+    }
+    & h3::before{
+        content: '+';
+        position: absolute;
+        right: 1rem;
+    }
+    & .contenido{
+        text-align: justify;
+        height: 0;
+        overflow: hidden;
+        transition: 0.7s;
+        background-color: var(--faq-dark);
+        & p{
+            font-size: 1rem;
+            line-height: 1.5;
+            padding-bottom: 0.5rem;
+        }
+    }
+    & .activa .contenido{
+        padding: 1em;
+        height: auto; 
+    }
+    
+    & .activa h3::before{
+        content: '-';
+    } */
+} 
+
+main section .correo{
+    margin-top: 20px; /*?*/
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+    & input{
+        width: 90%;
+        margin: auto;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #777676; /*No funciona*/
+        padding: 1rem;
+        border: 1px solid var(--border-input);
+        border-radius: 5px;
+        background-color: var(--bg-input);
+
+    }
+}
+
+
+
+/**footer*/
+footer{
+    flex: 0 0 auto;
+    display: flex;
+    color: var(--bg-section);
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    flex-basis: 10vh;
+    padding: 0.5rem;
+    text-align: left;
+    color: var(--soft-white);
+    & ul li{
+        list-style: none;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+footer p{
+    width: 100%;
+    margin: 15px auto;
+}
+footer a{
+    color: var(--soft-white);
+}
+footer ul{
+    /* width: 90%; */
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    font-size: 14px;
+    & li{
+        text-align: left;
+    }
+}
+
+footer label, footer select{
+    width: 45%;
+    text-align: left;
+}
+
+footer p:last-child{
+    width: 45%;
+    text-align: left;
+}
+
+
+
+
+/*btn*/
+.red-btn{
+    background-color: var(--btn-color);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1rem;
+    
+}
+.red-btn:hover{
+    background-color: var(--btn-hover);
+}
+
+
+/** Alba SIGNUP */
+.signUp{
+    background-color: #fff;
+    color: #333333;
+}
+/* SIGNUP Header */
+.signUp header{
+    border-bottom: 1px solid #e6e6e6;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: center;
+    & h1{
+        font-size: 1.1rem;
+        padding: .9rem;
+    }
+    & a{
+        padding:.6rem;
+        font-size: .9rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: #333333;
+    }
+}
+/* SIGNUP Main */
+.signUp i{
+    color: var(--btn-color);
+}
+.signUp #main-signUp {
+    padding: 6rem 3rem;
+    text-align: left;
+    & span{
+        order: 0;
+        font-size: 3.2rem;
+        padding-bottom: 1rem;
+    }
+    & h2{
+        font-size: .9rem;
+        font-weight: normal;
+    }
+    & article{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        & h3{
+            /* order: 1; */
+            font-size: 32px;
+            font-weight: lighter;
+        }
+        & ul{
+            /* order: 2; */
+            & li{
+                padding-bottom: 1.2rem;
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+            
+                & i{
+                    padding-right: 1rem;
+                    font-size: 1.8rem;
+                }
+                & p{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        & a{
+            order: 4;
+            padding: 1rem;
+            width: 100%;
+            font-size: 1.5rem;
+            background-color: var(--btn-color);
+            color: var(--font-color);
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+        & a:hover{
+            background-color: var(--btn-hover);
+        }
+
+    }
+}
+/* SIGNUP footer */
+.signUp footer{
+    background-color: var(--bg-footer-signUp);
+    color: var(--font-footer-signUp);
+    border-top: 1px solid rgb(230, 230, 230);
+    & a{
+        color: var(--font-footer-signUp);
+        text-decoration: none;   
+    }
+}
+/** Alba main plan */
+#main-plan .tab{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: .5rem;
+    & .tablinks{
+        padding: 0.5rem;
+        border-radius: 15px;
+        border: 1px solid var(--border-input);
+    }
+    & .tablinks.active {
+        background-color: var(--btn-color);
+        color: var(--font-color);
+    }
+
+}
+/**Albaaa mediaqueries*/
+@media only screen and (min-width: 768px){
+    .signUp header{
+        & h1{
+            font-size: 3rem;
+        }
+        & a{
+            font-size: 1.2rem;
+            padding: 1rem;
+        }
+    }
+    .signUp main{
+        width: 400px;
+        margin: auto;
+        & h3, > span{
+            text-align: center;
+        }
+    }
+    .signUp footer{
+        padding: 1rem 2rem;
+        margin: 0; /*?revisar footer principal i treure margin alla*/
+        & ul{
+            padding-top: 1rem;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+    }
+}
+@media only screen and (min-width: 1440px){
+    .signUp footer{
+        & ul{
+            width: 75%;
+        }
+    }
+
+}
+
+/** Altres mediaqueries probablement anticuades */
+/* @media only screen and (min-width: 375px){
+    #img-filter{
+        display: flex;
+        flex-direction: row;
+        & ul{
+            margin: 0px;
+        }
+    }
+} */
+
+@media only screen and (min-width: 768px){
+    main section .correo{
+        gap: 0rem;
+        & input{
+            width: 60%;
+            margin-right: 5px;
+            margin-left: 20px;
+        }
+    }
+    .red-btn{
+        width: 30%;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #img-filter{
+        display: flex;
+        flex-direction: row;
+        /* & nav{
+            text-align: end;
+            align-items: end;
+        } */
+    }
+}

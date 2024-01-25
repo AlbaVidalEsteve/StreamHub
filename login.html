@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/79d8e2848d.js" crossorigin="anonymous"></script>
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Violeta Films</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+           <h1>Iniciar sesión</h1>
+            <form name="login" id="login" method="post" action="">
+                <fieldset>
+                    <input type="email" name="correo" id="correo" placeholder="Correo electrónico o número de teléfono">
+
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+
+                    <input type="submit" value="Iniciar sesión">
+                    
+                    <input type="checkbox" name="recordar" id="recordar">
+                    <label for="recordar">Recuérdame</label>
+                    <a href="#">¿Necesitas ayuda?</a>
+                </fieldset>
+                <div id="suscribete">
+                    <p>¿Todavía sin Violeta Films? <a href="#">Suscríbete ya</a>.</p>
+                </div>
+                <div id="recaptcha">
+                    <p>Esta página Google reCAPTCHA para garantizar que no eres un robot. <a href="#">Más información.</a></p>
+                </div>
+            </form>
+            
+        </section>
+    </main>
+    <footer>
+        <p>¿Preguntas? Llama al <a href="#">900-759-106</a></p>
+        <ul>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Preferencias de cookies</a></li>
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Información corporativa</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Opciones de anuncios</a></li>
+            <li><a href="#">Privacidad</a></li>
+        </ul>
+        <label for="idioma"><i class="fa-solid fa-language"></i>Español</label> <!--! Cambiar en el html en ingles -->
+        <select name="idima" id="idioma">
+            <option value="" selected><a href="violetafilms.html">Español</a></option>
+            <option value=""><a href="violetafilms-english.html">English</a></option>
+    </footer>
+
+</body>
+</html>
