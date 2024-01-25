@@ -10,27 +10,19 @@
     <!-- Mis estilos -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="index">
     <header>
         <h1>VioletaFilms</h1> 
         <!--? Poner logo -->
         <nav>
             <ul>
                 <li>
-                    <div class="container idioma">
-                        <div class="select">
-                            <i class="fa-solid fa-language"></i>
-                            <i class="fa-solid fa-angle-down"></i>
-                        </div>
-                        <div class="contenido">
-                            <a href="violetafilms.html">Español</a>
-                            <a href="violetafilms-english.html">English</a>
-                        </div>
+                    <div class="lang-container">
+                        <select name="valores" id="valores">
+                            <option value="Ingles">Ingles</option>
+                            <option value="Español">Español</option>
+                        </select>
                     </div>
-                    <!-- <select name="idioma" id="idioma">
-                        <option value="sp" selected><a href="violetafilms.html">Español</a></option>
-                        <option value="en"><a href="violetafilms-english.html">English</a></option>
-                    </select> -->
                 </li>
                 <li><a href="login.html">Iniciar sesión</a></li>
             </ul>
@@ -41,18 +33,14 @@
 
     <main>
         <section>
-            
             <h2>Películas y series sin límites y mucho más</h2>
             <p>Disfruta donde quieras. Cancela cuando quieras</p>
             <p>¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla.</p>
-            
-            
             <div class="correo">
                 <!-- buscador -->
                 <input type="email" name="correo" id="correo" required placeholder="Dirección de correo">
                 <a  class="red-btn">Empezar <i class="fa-solid fa-chevron-right"></i></a>
             </div>
-
         </section>
         <section class="banner">
             <svg width="96" height="96" fill="none">
@@ -180,23 +168,11 @@
             <li><a href="#">Preferencias de cookies</a></li>
             <li><a href="#">Garantía legal</a></li>            
         </ul>
-         <!--! Cambiar en el html en ingles -->
-        <div class="container idioma">
-            <div class="select">
-                <i class="fa-solid fa-language"></i>
-                <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <div class="contenido">
-                <a href="violetafilms.html">Español</a>
-                <a href="violetafilms-english.html">English</a>
-            </div>
-        </div>
-        <!-- <label for="idioma"><i class="fa-solid fa-language"></i>Español</label>
-            <select name="idioma" id="idioma">
-            <option value="" selected><a href="violetafilms.html">Español</a></option>
-            <option value=""><a href="violetafilms-english.html">English</a></option>
-        </select> -->
-        <small>Netflix España</small>
+        <select name="language" id="language">
+            <option value="Ingles">Ingles</option>
+            <option value="Español">Español</option>
+        </select>
+        <small>Netflix Spain</small>
     </footer>
 </body>
 </html>

@@ -7,6 +7,42 @@ contenedores.forEach(contenedor => {
     });
 });
 
+
+//Selected language
+let seleccion = document.querySelector('#valores');
+
+seleccion.addEventListener('change', function(){
+    let opcionSeleccionada = this.options[this.selectedIndex];
+
+    if(opcionSeleccionada.value == 'Espanol'){
+        console.log('Opcion seleccionada Español');
+        window.location.assign('violetafilms.html');
+        
+    }else{
+        console.log('Opcion seleccionada Ingles');
+        window.location.assign('violetafilms-english.html');
+    }
+
+});
+
+let otroseleccion = document.getElementById('lang');
+console.log(otroseleccion)
+otroseleccion.addEventListener('change', function(){
+    let opcionSeleccionada = this.options[this.selectedIndex];
+
+    if(opcionSeleccionada.value == 'Espanol'){
+        console.log('Opcion seleccionada Español');
+        window.location.assign('violetafilms.html');
+        
+    }else{
+        console.log('Opcion seleccionada Ingles');
+        window.location.assign('violetafilms-english.html');
+    }
+
+});
+
+
+
 // // Seleccionar los botones
 // let botones = document.querySelectorAll('.tablinks');
 // // Esperar a que se produzca click
