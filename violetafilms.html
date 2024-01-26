@@ -17,11 +17,12 @@
         <nav>
             <ul>
                 <li>
-                    <select name="valores" id="valores" class="valores">
-                        <option value="Español">Español</option>
-                        <option value="Ingles">Ingles</option>
-                            <!-- <option value="Español">Español</option> -->
-                    </select>
+                    <div class="lang-container">
+                        <select name="valores" id="valor1" class="valores">
+                        <option value="1">español</option>
+                        <option value="2">english</option>
+                        </select>
+                    </div>
                 </li>
                 <li><a href="login.html">Iniciar sesión</a></li>
             </ul>
@@ -166,11 +167,16 @@
             <li><a href="#">Preferencias de cookies</a></li>
             <li><a href="#">Garantía legal</a></li>            
         </ul>
-        <select name="lang" id="lang" class="valores">
-            <option value="Español">Español</option>
-            <option value="Ingles">Ingles</option>
-        </select>
-        <small>StreamHub Spain</small>
+        <div class="lang-container">
+            <select name="valores" id="valor2" class="valores">
+            <option value="1">español</option>
+            <option value="2">english</option>
+            </select>
+        </div>
+        
+        <small>Netflix Spain</small>
+        <!-- Script -->
+        <script src="js/script.js"></script>
     </footer>
 </body>
 </html>
