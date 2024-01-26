@@ -1,26 +1,33 @@
-/* 
+/* !canviar numeros de telefon
+TODO: Afegir links als h1 que vagin a violeta fils sp i english
+TODO: LINKS? mirar on porten els login NAV
 
 *EDU    
     TODO: mediaquieries;
-    TODO: footer;
-    TODO: background header;
-    TODO: PLAN ESPAÑOL
-    TODO: SELECT IDIOMA
+    done: footer;
+    TODO: background header no repeat cover etc;
+    done: PLAN ESPAÑOL
+    done: SELECT IDIOMA
 
     
 *ALBA
-    TODO: Arreglar nav; 
+    TODO: Arreglar red btn aling items alinear la fletxa; 
     done: position banner "flotant";
     done: botones FAQs js; 
     done: filter background header i section 1
+    TODO: Comprobar paddings de p en sections i faqs;
+
     
 
 *MARC
-    TODO: Comprobar paddings de p en sections i faqs;
     todo: login
 
 *CONJUNT
 TODO: Español; label & mediaquearies;
+ *Sign up 
+TODO: titol padding, color i underline none
+done: COLOR SIGNIN LETRA BLANCO
+done: BOTON HOVER
 
 */
 
@@ -576,7 +583,11 @@ footer{
     }
     & input[type='submit']{
         background-color: var(--btn-color);
-        margin-bottom: 5px;
+        margin-bottom: 5px; 
+        color: var(--font-color);
+    }
+    & input[type='submit']:hover{
+        background-color: var(--btn-hover);
     }
     & ul li{
         list-style: none;
