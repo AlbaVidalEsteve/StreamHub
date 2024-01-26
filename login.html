@@ -3,69 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login ENGLISH</title>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/79d8e2848d.js" crossorigin="anonymous"></script>
     <!-- Mis estilos -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bodyLogin">
-    <header id="headerLogin">
-        <nav>
-            <a href="#">Violeta Films</a>
-        </nav>
+<body id="sesion">
+    <header>
+        <h1><a href="StreamHub-english.html">StreamHub</a></h1>
     </header>
-    <main class="main-login">
-        <section class="login">
-            <div class="iniciar">
-                <h2>Sign In</h2>
-                <form name="login" id="login" method="post" action="">
-                    <input type="email" name="correo" id="correo" placeholder="Email or phone number">
-                    <input type="password" name="contrasena" id="contrasena" placeholder="Password">
-                    <input type="submit" value="Login" id="iniciaSesion">
-                    <br>
-                    <div class="recor">
-                        <div class="uno">
-                            <input type="checkbox" name="recordar" id="recuerda">
-                            <label for="recuerda" id="recuerda">Remember me</label>
-                        </div>
-                        <div class="dos">
-                            <a href="#">¿Need help?</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="masInfo">
-                <div id="suscribete">
-                    <p>¿New to Netflix? <a href="#">Sign up now</a>.</p>
-                </div>
-                <div id="recaptcha">
-                    <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href="#"> Learn more.</a></p>
-                </div>
-            </div>
+    <main>
+        <section>
+            <h2>Sign In</h2>
+            <form action="#" method="post" name="formulario-basico" id="formulario-basico" enctype="multipart/form-data">
+                <fieldset>
+                    <ul>
+                        <li>
+                            <input type="email" name="correo" id="correo" placeholder="Email">
+                        </li>
+                        <li>
+                            <input type="password" name="contrasena" id="contrasena" placeholder="Password">
+                        </li>
+                        <li>
+                            <input type="submit" value="Sign in" id="iniciaSesion">
+                        </li>
+                        <li>
+                            <a href="#">¿Forgot password?</a>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="recordar" id="recuerda">
+                                <label for="recuerda" id="recuerda">Remember me</label>
+                            </li>
+                            <li>
+                                <p>New to Netflix?<a href="#">Sign up now</a></p>
+                            </li>
+                        </ul>
+                </fieldset>
         </section>
-        <!-- Script -->
-        <script src="js/script.js"></script>
     </main>
-    <footer class="footerLogin">
-        <div class="footerLog">
-            <p>Questions? Contact us.<a href="#">900-759-106</a></p>
-            <ul class="columns">
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Cookie Preferences</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Corporate Information</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Ad Choices</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
-            <label for="idioma"><i class="fa-solid fa-language"></i>Español</label> <!--! Cambiar en el html en ingles -->
-            <select name="idima" id="idioma">
-                <option value="" selected><a href="violetafilms.html">Español</a></option>
-                <option value=""><a href="violetafilms-english.html">English</a></option>
+    <footer>
+        <p>Questions? Contact us.<a href="#">900-759-106</a></p>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Corporate Information</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Ad Choices</a></li>
+            <li><a href="#">Privacy</a></li>
+        </ul>
+        <div class="lang-container">
+            <select name="valores" id="valor10" class="valores">
+                <option value="8">English</option>
+                <option value="7">Español</option>
             </select>
         </div>
     </footer>
+    <!-- Script -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>
