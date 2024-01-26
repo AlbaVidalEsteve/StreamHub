@@ -76,10 +76,10 @@ seleccion.forEach((selector) => {
                 window.location.assign('planform.html');
                 break;
             case '7':
-                window.location.assign('login.html');
+                window.location.assign('loginSP.html');
                 break;
             case '8':
-                window.location.assign('loginSP.html');
+                window.location.assign('login.html');
                 break;
             default:
                 console.log(idioma);
