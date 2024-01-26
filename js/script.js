@@ -67,7 +67,7 @@ seleccion.forEach((selector) => {
                 window.location.assign('signupSP.html');
                 break;
             case '4':
-                window.location.assign('singup.html');
+                window.location.assign('signup.html');
                 break;
             case '5':
                 window.location.assign('planform2.html');
