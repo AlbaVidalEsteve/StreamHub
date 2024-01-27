@@ -215,16 +215,18 @@ select{
 #index main .banner{
     background-image: radial-gradient(ellipse at top, #ce0a1e, #bb003d, #9d0052, #77005d, #4d175e, #351b57, #1f1b4c, #0a183f, #081534, #081129, #050b1e, #000413);
     text-align: left;
-    display: grid; 
-    /* margin: auto; */
-    justify-content: center;  
     width: 90%;
+    display: grid; 
+    justify-content: center;  
     border-radius: 5px;
     position: relative;
     bottom: 5rem;
     line-height: 2rem;
     border: none; /**añadir*/
     border-radius: 7px;
+    & figure{
+        /* width: 120px; */
+    }
     & h4{
         font-size: 1.2rem;
     }
@@ -707,10 +709,10 @@ footer{
     }
     #index .banner{
         display: grid;
-        grid-template-columns: 96px 400px;
+        grid-template-columns: 110px 400px;
         align-items: center;
         column-gap: 2rem;
-        & img{
+        & figure{
             grid-row: span 3;
         }
     }
@@ -880,6 +882,15 @@ footer{
 }
 
 @media only screen and (min-width: 1440px){
+    #index .banner{
+        grid-template-columns: 150px 600px;
+        & figure{
+            width: 100%;
+            & img{
+                width: 100%;
+            }
+        }
+    }
     .signUp footer{
         & ul{
             width: 75%;
@@ -932,6 +943,15 @@ footer{
 }
 
 @media only screen and (min-width: 2560px){
+    .signUp #main-signUp {
+        width: 800px;
+    }
+    #background, #velo{
+        height: 1000px;
+    }
+    #index .banner{
+        grid-template-columns: 250px 950px;
+    }
     :root{
         font-size: 32px;
     }
