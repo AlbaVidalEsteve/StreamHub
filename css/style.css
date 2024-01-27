@@ -878,6 +878,11 @@ footer{
         & section{
             width: 45%;
         }
+        & footer{
+            & ul{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }   
     }
 }
 
@@ -939,10 +944,21 @@ footer{
         & #velo{
             height: 100%;
         }
+        
+        & footer{
+            & ul{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }   
+        
     }
 }
 
 @media only screen and (min-width: 2560px){
+    /* #sesion fieldset:nth-of-type(2){
+        & ul li input{
+            font-size: 2rem;
+        } */
     .signUp #main-signUp {
         width: 800px;
     }
