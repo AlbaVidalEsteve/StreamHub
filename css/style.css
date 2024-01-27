@@ -582,9 +582,16 @@ footer{
 
 /** Login English */
 #sesion{
+    background-image: url(../img/Netflix-1280x720.jpg);
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: var(--bg-color);
+
     display: flex;
     flex-direction: column;
     height: 100vh;
+    
     /* justify-content: center; */
     & header, footer{
         flex: 0 0 auto;
@@ -593,6 +600,13 @@ footer{
     & header{
         padding: 0.7rem;
         text-align: start;
+        & h1 a{
+            font-size: 2rem;
+            padding: .9rem;
+            color: var(--btn-color);
+            text-decoration: none;
+            cursor: pointer;
+        }
     }
     & main{
         flex: 1 0 auto;
@@ -640,7 +654,6 @@ footer{
     }
     & ul li{
         list-style: none;
-        /* gap: 2rem; */
     }
     fieldset:nth-of-type(2){
         
@@ -755,14 +768,9 @@ footer{
         }
     }
     #sesion{
-        /* align-items: center; */
-        background: url(../img/Netflix-1280x720.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* justify-content: center; */
-
-        
-        /* background: ; */
+        height: 100vh;
+        width: auto;
+        background-image: url(../img/Netflix-1280x720.jpg);
         & #velo{
             height: all;
         }
@@ -770,20 +778,19 @@ footer{
             background-color: #000000;
         }
         & section{
-            background-color: #000000;
+            background-color: #000000ae;
             width: 60%;
             justify-content: center;
             margin: auto;
             align-items: center;
-            opacity: .8;
             & h2{
                 padding-top: 40px;
                 padding-left: 60px;
+                
             }
         }
         & form{
             width: 70%;
-            opacity: 1;
         }
         fieldset:nth-of-type(2){
             padding-bottom: 60px;
@@ -865,8 +872,10 @@ footer{
     .signUp #main-plan{
       width: 55%;
     }
-    #sesion section{
-        width: 45%;
+    #sesion{
+        & section{
+            width: 45%;
+        }
     }
 }
 
@@ -902,6 +911,9 @@ footer{
         }  
     }
     #sesion{
+        background: url(../img/Netflix-1280x720.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         & section{
             width: 30%;
         }
