@@ -224,9 +224,6 @@ select{
     line-height: 2rem;
     border: none; /**añadir*/
     border-radius: 7px;
-    & figure{
-        /* width: 120px; */
-    }
     & h4{
         font-size: 1.2rem;
     }
@@ -614,7 +611,9 @@ footer{
         flex: 1 0 auto;
         align-items: center;
         justify-content: center;
-        margin: 20px;
+        /* margin: 20px; */
+        padding: 20px;
+        padding-bottom: 0px;
     }
     & section{
         align-self: center;
@@ -669,6 +668,9 @@ footer{
     }
     & footer{
         border-top: 1px solid grey;
+    }
+    & a{
+        color: var(--blue-link);
     }
 }
 
@@ -771,10 +773,13 @@ footer{
     }
     #sesion{
         height: 100vh;
-        width: auto;
+        /* width: auto; */
         background-image: url(../img/Netflix-1280x720.jpg);
+        & main{
+            margin-bottom: none;
+        }
         & #velo{
-            height: all;
+            height: auto;
         }
         & footer{
             background-color: #000000;
@@ -877,6 +882,7 @@ footer{
     #sesion{
         & section{
             width: 45%;
+            height: 90%;
         }
         & footer{
             & ul{
