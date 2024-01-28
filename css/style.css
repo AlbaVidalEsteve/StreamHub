@@ -583,103 +583,109 @@ footer{
 }
 
 /** Login English */
-#sesion{
-    background-image: url(../img/Netflix-1280x720.jpg);
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-color: var(--bg-color);
+#sesion #background{
+    position: absolute;
+    width: 100vw;
+    height: 610px;
+    display: none;
+    z-index: -2;
 
+}
+#sesion #velo{
+    position: absolute;
+    width: 100vw;
+    height: 610px;
+    z-index: -1;
+}
+#sesion header{
+    display: flex;
+    align-items: start;
+    padding: 1rem;
+    & h1 a{
+        color: var(--btn-color);
+        text-decoration: none;
+    }
+}
+#sesion main{
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    
-    /* justify-content: center; */
-    & header, footer{
-        flex: 0 0 auto;
-        display: flex;
-    }
-    & header{
-        padding: 0.7rem;
-        text-align: start;
-        & h1 a{
-            font-size: 2rem;
-            padding: .9rem;
-            color: var(--btn-color);
-            text-decoration: none;
-            cursor: pointer;
-        }
-    }
-    & main{
-        flex: 1 0 auto;
-        align-items: center;
-        justify-content: center;
-        /* margin: 20px; */
-        padding: 20px;
-        padding-bottom: 0px;
-    }
+    justify-items: start;
     & section{
-        align-self: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        & h2{
-            align-self: flex-start;
-            padding-bottom: 20px;
+        background-color: var(--bg-color);
+        padding: 1rem;
+        margin: 1rem;
+    }
+    & section h2{
+        text-align: left;
+    }
+    & section form{
+        accent-color: var(--bg-footer-signUp);
+        & fieldset{
+            border: none;
+            & ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                & li {
+                    list-style: none;
+                    & input[type="email"],input[type="password"]{
+                        width: 100%;
+                        background-color: var(--bg-input);
+                        border: 1px solid var(--border-input);
+                        line-height: 2rem;
+                        border-radius: 5px;
+                        padding: 0.5rem;
+                        color: var(--bg-signUp);
+                        font-weight: bold;
+                    }
+                    & input[type="email"]:focus,input[type="password"]:focus{
+                        background-color: var(--faq-hover);
+                    }
+                    & input[type="submit"]{
+                        background-color: var(--btn-color);
+                        padding: 1rem;
+                        border-radius: 5px;
+                        border: none;
+                        color: var(--bg-footer-signUp);
+                        font-weight: bold;
+                        width: 200px;
+                    }
+                    & input[type="submit"]:hover{
+                        background-color: var(--btn-hover);
+                    }
+                    & a{
+                        color: var(--bg-footer-signUp);
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+
+                }
+            }
         }
-    }
-    & form{
-        width: 100%;
-    }
-    & fieldset{
-        border: none;
-        margin-bottom: 20px;
-    }
-    & input[type='email'], input[type='password'], input[type='submit']{
-        width: 100%;
-        height: 3rem;
-        border-radius: 4px;
-        background-color: var(--border-section);
-        color: var(--border-input);
-        border: transparent;
-        margin-top: 15px;
-        font-size: 0.85rem;
-        text-indent: 5%;
-    }
-    & input[type='submit']{
-        background-color: var(--btn-color);
-        margin-bottom: 5px; 
-        color: var(--font-color);
-        margin-bottom: 25px;
-    }
-    & input[type='submit']:hover{
-        background-color: var(--btn-hover);
-    }
-    & ul li{
-        list-style: none;
-    }
-    fieldset:nth-of-type(2){
-        
-        & ul li{
+        & fieldset:last-child{
             text-align: left;
-            margin-bottom: 10px;
+            & ul li:first-child{
+                color: var(--bg-footer-signUp);
+            }
+            & ul li{
+                font-size: 0.8rem;
+                color: var(--border-input);
+                & span{
+                    color: var(--blue-link);
+                }
+            }
         }
     }
-    & select{
-        margin-bottom: 15px;
-    }
-    & footer{
-        border-top: 1px solid grey;
-    }
-    & a{
-        color: var(--blue-link);
-    }
+
+
+}
+#sesion footer{
+    background-color: var(--bg-color);
 }
 
 
-
-/*    !MEDIAQUERIES                */
+/*    !MEDIAQUERIES             */
 @media only screen and (min-width: 375px){
     #index header{
         display: flex;
@@ -774,40 +780,12 @@ footer{
             gap:2rem;
         }
     }
-    #sesion{
-        height: 100vh;
-        width: 100vw;
-        background-image: url(../img/Netflix-1280x720.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        & main{
-            margin-bottom: none;
-        }
-        & #velo{
-            height: 100vh;
-        }
-        & footer{
-            background-color: #000000;
-        }
-        & section{
-            background-color: #000000ae;
-            width: 60%;
-            justify-content: center;
-            margin: auto;
-            align-items: center;
-            & h2{
-                padding-top: 40px;
-                padding-left: 60px;
-                
-            }
-        }
-        & form{
-            width: 70%;
-        }
-        fieldset:nth-of-type(2){
-            padding-bottom: 60px;
-        }
+    #sesion main{
+        width: 60%;
+        margin: auto;
     }
+    #sesion #background{display: block;}
+
 }
 
 @media only screen and (min-width: 1024px){
@@ -883,17 +861,10 @@ footer{
     .signUp #main-plan{
       width: 55%;
     }
-    #sesion{
-        & section{
-            width: 45%;
-            height: 90%;
-        }
-        & footer{
-            & ul{
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }   
+    #sesion main{
+        width: 50%;
     }
+
 }
 
 @media only screen and (min-width: 1440px){
@@ -936,39 +907,11 @@ footer{
             }
         }  
     }
-    #sesion{
-        /* background: url(../img/Netflix-1280x720.jpg);
-        background-repeat: no-repeat;
-        background-size: cover; */
-        & section{
-            width: 30%;
-        }
-        & header{
-            width: 80%;
-            margin: auto;
 
-        }
-        & fieldset:nth-of-type(2){
-            padding-top: 35px;
-        }
-        /* & #velo{
-            height: 100%;
-        } */
-        
-        & footer{
-            & ul{
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }   
-        
-    }
 }
 
 @media only screen and (min-width: 2560px){
-    /* #sesion fieldset:nth-of-type(2){
-        & ul li input{
-            font-size: 2rem;
-        } */
+
     .signUp #main-signUp {
         width: 800px;
     }
@@ -980,6 +923,9 @@ footer{
     }
     :root{
         font-size: 32px;
+    }
+    #sesion main{
+        width: 30%;
     }
 }
 /*? MARC */
