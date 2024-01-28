@@ -108,7 +108,7 @@ h1{
 #velo{
     position: absolute;
     width: 100vw;
-    height: 700px;
+    /* height: 700px; */
     z-index: -1;
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,0.5046393557422969) 64%, rgba(0,0,0,0.9416141456582633) 92%);
@@ -133,6 +133,9 @@ select{
 }
 
 /** Header */
+#index #velo{
+    height: 700px;
+}
 #index header{
     flex: 0 0 auto;
     width: 100%;
@@ -773,13 +776,15 @@ footer{
     }
     #sesion{
         height: 100vh;
-        /* width: auto; */
+        width: 100vw;
         background-image: url(../img/Netflix-1280x720.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         & main{
             margin-bottom: none;
         }
         & #velo{
-            height: auto;
+            height: 100vh;
         }
         & footer{
             background-color: #000000;
@@ -817,7 +822,6 @@ footer{
             font-size: 1.5rem;
         }
     }
-       
     #index main section:first-child .correo{
         width: 65%;
         margin: auto;
@@ -933,9 +937,9 @@ footer{
         }  
     }
     #sesion{
-        background: url(../img/Netflix-1280x720.jpg);
+        /* background: url(../img/Netflix-1280x720.jpg);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; */
         & section{
             width: 30%;
         }
@@ -947,9 +951,9 @@ footer{
         & fieldset:nth-of-type(2){
             padding-top: 35px;
         }
-        & #velo{
+        /* & #velo{
             height: 100%;
-        }
+        } */
         
         & footer{
             & ul{
@@ -968,7 +972,7 @@ footer{
     .signUp #main-signUp {
         width: 800px;
     }
-    #background, #velo{
+    #background, #index #velo{
         height: 1000px;
     }
     #index .banner{
