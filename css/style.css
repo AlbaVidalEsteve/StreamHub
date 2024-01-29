@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* !canviar numeros de telefon
 !background img 4k height
 TODO: Afegir links als h1 que vagin a violeta fils sp i english
@@ -5,11 +7,14 @@ TODO: LINKS? mirar on porten els login NAV
 TODO: 
 
 *EDU    
-    TODO: mediaquieries;
+    done: mediaquieries;
     done: footer;
     done: background header no repeat cover etc;
     done: PLAN ESPAÑOL
     done: SELECT IDIOMA
+    done: titol padding, color i underline none
+    done: Español; label & mediaquearies;
+
     
 *ALBA
     done: Arreglar red btn aling items alinear la fletxa; 
@@ -20,20 +25,18 @@ TODO:
     TODO: Comprobar paddings de p en sections i faqs;
     done: CAMBIAR SVG TO PNG HTML
     TODO: afegir alt a les img
-    ?TODO: afegir imatges
+    done: afegir imatges
     done:color a banner
-    TODO: canviar telefons
+    done: canviar telefons
     DONE: CANVIAR TIPUS LLETRA STREAMHUB
-    TODO: arreglar CSS h1 a tots els llocs font-size etc
-    TODO: 4K
+    done: arreglar CSS h1 a tots els llocs font-size etc
+    done: 4K
 
 *MARC
     todo: login
 
 *CONJUNT
-TODO: Español; label & mediaquearies;
  *Sign up 
-TODO: titol padding, color i underline none
 done: COLOR SIGNIN LETRA BLANCO
 done: BOTON HOVER
 
@@ -42,7 +45,6 @@ TODO: Planform section onclick activar class active
 
 */
 
-@charset "utf-8";
 
 *{
     margin: 0;
@@ -108,7 +110,6 @@ h1{
 #velo{
     position: absolute;
     width: 100vw;
-    /* height: 700px; */
     z-index: -1;
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,0.5046393557422969) 64%, rgba(0,0,0,0.9416141456582633) 92%);
@@ -185,11 +186,7 @@ select{
         background-color: var(--bg-color);
         & h2{
             padding: 1rem 0;
-            font-size: 2.2rem ;
-            /* font-family: 'Yanone Kaffeesatz', sans-serif;
-            letter-spacing: 0.2rem;
-            font-weight: bold; */
-            
+            font-size: 2.2rem ;            
         }
         & p{
             font-size: 1.1rem;
@@ -227,7 +224,7 @@ select{
     line-height: 2rem;
     border: none; /**añadir*/
     border-radius: 7px;
-    & h4{
+    & h2{
         font-size: 1.2rem;
     }
     & p{
