@@ -1,10 +1,7 @@
-@charset "utf-8";
-
-/* !canviar numeros de telefon
-!background img 4k height
-TODO: Afegir links als h1 que vagin a violeta fils sp i english
+/* done anviar numeros de telefon
+done background img 4k height
+done: Afegir links als h1 que vagin a violeta fils sp i english
 TODO: LINKS? mirar on porten els login NAV
-TODO: 
 
 *EDU    
     done: mediaquieries;
@@ -12,9 +9,6 @@ TODO:
     done: background header no repeat cover etc;
     done: PLAN ESPAÑOL
     done: SELECT IDIOMA
-    done: titol padding, color i underline none
-    done: Español; label & mediaquearies;
-
     
 *ALBA
     done: Arreglar red btn aling items alinear la fletxa; 
@@ -25,26 +19,28 @@ TODO:
     TODO: Comprobar paddings de p en sections i faqs;
     done: CAMBIAR SVG TO PNG HTML
     TODO: afegir alt a les img
-    done: afegir imatges
+    ?TODO: afegir imatges
     done:color a banner
     done: canviar telefons
     DONE: CANVIAR TIPUS LLETRA STREAMHUB
-    done: arreglar CSS h1 a tots els llocs font-size etc
+    TODO: arreglar CSS h1 a tots els llocs font-size etc
     done: 4K
 
 *MARC
     todo: login
 
 *CONJUNT
+TODO: Español; label & mediaquearies;
  *Sign up 
+TODO: titol padding, color i underline none
 done: COLOR SIGNIN LETRA BLANCO
 done: BOTON HOVER
 
 ?EXTRA
 TODO: Planform section onclick activar class active
-
 */
 
+@charset "utf-8";
 
 *{
     margin: 0;
@@ -104,8 +100,6 @@ body{
 
 h1{
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    /* text-transform: uppercase;
-    font-weight: bold; */
 }
 #velo{
     position: absolute;
@@ -224,7 +218,7 @@ select{
     line-height: 2rem;
     border: none; /**añadir*/
     border-radius: 7px;
-    & h2{
+    & h4{
         font-size: 1.2rem;
     }
     & p{
@@ -273,9 +267,8 @@ select{
     }
     & .activa .contenido{
         padding: 1em;
-        height: auto; /*se puede poner auto */
+        height: auto;
     }
-    
     & .activa h3::before{
         content: '-';
     }
@@ -313,8 +306,6 @@ select{
     }
 }
 
-
-
 /**footer*/
 footer{
     flex: 0 0 auto;
@@ -349,17 +340,11 @@ footer{
         color: var(--soft-white);
 
     }
-    
     & small{
         padding-top: 25px;
         padding-bottom: 25px;
     }
 }
-
-
-
-
-
 
 /*btn*/
 .red-btn{
@@ -382,7 +367,7 @@ footer{
     background-color: var(--bg-signUp);
     color: #333333;
 }
-.signUp header{ /*header singup i plan arrelgat*/
+.signUp header{
     border-bottom: 1px solid #e6e6e6;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -530,11 +515,13 @@ footer{
                 flex-direction: column;
                 background:radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
                 border-radius: 8px;
-                & h4{
+
+                border-radius: 8px;
+                & p:first-child{
                     font-weight: bold;
                     color: var(--font-color);
                 }
-                & p{
+                & p:last-child{
                     font-weight: 0.5rem;
                     color: var(--font-color);
                 }
@@ -561,11 +548,8 @@ footer{
             & div:last-of-type{
                 border-bottom: transparent;
             }
-    
         }
         & section:hover, .active section{
-            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-            /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         }
         & >p{
@@ -578,103 +562,95 @@ footer{
 }
 
 /** Login English */
-#sesion{
-    background-image: url(../img/Netflix-1280x720.jpg);
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-color: var(--bg-color);
-
+#sesion header{
+    display: flex;
+    align-items: start;
+    padding: 1rem;
+    & h1 a{
+        color: var(--btn-color);
+        text-decoration: none;
+    }
+}
+#sesion main{
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    
-    /* justify-content: center; */
-    & header, footer{
-        flex: 0 0 auto;
-        display: flex;
-    }
-    & header{
-        padding: 0.7rem;
-        text-align: start;
-        & h1 a{
-            font-size: 2rem;
-            padding: .9rem;
-            color: var(--btn-color);
-            text-decoration: none;
-            cursor: pointer;
-        }
-    }
-    & main{
-        flex: 1 0 auto;
-        align-items: center;
-        justify-content: center;
-        /* margin: 20px; */
-        padding: 20px;
-        padding-bottom: 0px;
-    }
+    justify-items: start;
     & section{
-        align-self: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        & h2{
-            align-self: flex-start;
-            padding-bottom: 20px;
+        background-color: var(--bg-color);
+        padding: 1rem;
+        margin: auto;
+    }
+    & section h2{
+        text-align: left;
+    }
+    & section form{
+        accent-color: var(--bg-footer-signUp);
+        & fieldset{
+            border: none;
+            & ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                & li {
+                    list-style: none;
+                    & input[type="email"],input[type="password"]{
+                        width: 100%;
+                        background-color: var(--bg-input);
+                        border: 1px solid var(--border-input);
+                        line-height: 2rem;
+                        border-radius: 5px;
+                        padding: 0.5rem;
+                        color: var(--bg-signUp);
+                        font-weight: bold;
+                    }
+                    & input[type="email"]:focus,input[type="password"]:focus{
+                        background-color: var(--faq-hover);
+                    }
+                    & input[type="submit"]{
+                        background-color: var(--btn-color);
+                        padding: 1rem;
+                        border-radius: 5px;
+                        border: none;
+                        color: var(--bg-footer-signUp);
+                        font-weight: bold;
+                        width: 200px;
+                    }
+                    & input[type="submit"]:hover{
+                        background-color: var(--btn-hover);
+                    }
+                    & a{
+                        color: var(--bg-footer-signUp);
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+
+                }
+            }
         }
-    }
-    & form{
-        width: 100%;
-    }
-    & fieldset{
-        border: none;
-        margin-bottom: 20px;
-    }
-    & input[type='email'], input[type='password'], input[type='submit']{
-        width: 100%;
-        height: 3rem;
-        border-radius: 4px;
-        background-color: var(--border-section);
-        color: var(--border-input);
-        border: transparent;
-        margin-top: 15px;
-        font-size: 0.85rem;
-        text-indent: 5%;
-    }
-    & input[type='submit']{
-        background-color: var(--btn-color);
-        margin-bottom: 5px; 
-        color: var(--font-color);
-        margin-bottom: 25px;
-    }
-    & input[type='submit']:hover{
-        background-color: var(--btn-hover);
-    }
-    & ul li{
-        list-style: none;
-    }
-    fieldset:nth-of-type(2){
-        
-        & ul li{
+        & fieldset:last-child{
             text-align: left;
-            margin-bottom: 10px;
+            & ul li:first-child{
+                color: var(--bg-footer-signUp);
+            }
+            & ul li{
+                font-size: 0.8rem;
+                color: var(--border-input);
+                & span{
+                    color: var(--blue-link);
+                }
+            }
         }
     }
-    & select{
-        margin-bottom: 15px;
-    }
-    & footer{
-        border-top: 1px solid grey;
-    }
-    & a{
-        color: var(--blue-link);
-    }
+
+
+}
+#sesion footer{
+    background-color: var(--bg-color);
 }
 
 
-
-/*    !MEDIAQUERIES                */
+/*    !MEDIAQUERIES             */
 @media only screen and (min-width: 375px){
     #index header{
         display: flex;
@@ -769,39 +745,20 @@ footer{
             gap:2rem;
         }
     }
+    #sesion section{
+        width: 60%;
+        margin: auto;
+    }
     #sesion{
-        height: 100vh;
-        width: 100vw;
         background-image: url(../img/Netflix-1280x720.jpg);
-        background-repeat: no-repeat;
         background-size: cover;
-        & main{
-            margin-bottom: none;
+        background-repeat: no-repeat;
+        & header, main{
+            background-color: #00000070;
         }
-        & #velo{
-            height: 100vh;
-        }
-        & footer{
-            background-color: #000000;
-        }
-        & section{
-            background-color: #000000ae;
-            width: 60%;
-            justify-content: center;
-            margin: auto;
-            align-items: center;
-            & h2{
-                padding-top: 40px;
-                padding-left: 60px;
-                
-            }
-        }
-        & form{
-            width: 70%;
-        }
-        fieldset:nth-of-type(2){
-            padding-bottom: 60px;
-        }
+        /* & main {
+           height: 600px;
+        } */
     }
 }
 
@@ -878,17 +835,10 @@ footer{
     .signUp #main-plan{
       width: 55%;
     }
-    #sesion{
-        & section{
-            width: 45%;
-            height: 90%;
-        }
-        & footer{
-            & ul{
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }   
+    #sesion section{
+        width: 50%;
     }
+
 }
 
 @media only screen and (min-width: 1440px){
@@ -931,39 +881,10 @@ footer{
             }
         }  
     }
-    #sesion{
-        /* background: url(../img/Netflix-1280x720.jpg);
-        background-repeat: no-repeat;
-        background-size: cover; */
-        & section{
-            width: 30%;
-        }
-        & header{
-            width: 80%;
-            margin: auto;
 
-        }
-        & fieldset:nth-of-type(2){
-            padding-top: 35px;
-        }
-        /* & #velo{
-            height: 100%;
-        } */
-        
-        & footer{
-            & ul{
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }   
-        
-    }
 }
 
 @media only screen and (min-width: 2560px){
-    /* #sesion fieldset:nth-of-type(2){
-        & ul li input{
-            font-size: 2rem;
-        } */
     .signUp #main-signUp {
         width: 800px;
     }
@@ -975,6 +896,9 @@ footer{
     }
     :root{
         font-size: 32px;
+    }
+    #sesion section{
+        width: 30%;
     }
 }
 /*? MARC */
