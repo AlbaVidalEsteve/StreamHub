@@ -756,6 +756,9 @@ footer{
         & header, main{
             background-color: #00000070;
         }
+        /* & main {
+           height: 600px;
+        } */
     }
 }
 
