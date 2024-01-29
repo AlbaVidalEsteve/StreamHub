@@ -1,11 +1,10 @@
-/* !canviar numeros de telefon
-!background img 4k height
-TODO: Afegir links als h1 que vagin a violeta fils sp i english
+/* done anviar numeros de telefon
+done background img 4k height
+done: Afegir links als h1 que vagin a violeta fils sp i english
 TODO: LINKS? mirar on porten els login NAV
-TODO: 
 
 *EDU    
-    TODO: mediaquieries;
+    done: mediaquieries;
     done: footer;
     done: background header no repeat cover etc;
     done: PLAN ESPAÑOL
@@ -22,10 +21,10 @@ TODO:
     TODO: afegir alt a les img
     ?TODO: afegir imatges
     done:color a banner
-    TODO: canviar telefons
+    done: canviar telefons
     DONE: CANVIAR TIPUS LLETRA STREAMHUB
     TODO: arreglar CSS h1 a tots els llocs font-size etc
-    TODO: 4K
+    done: 4K
 
 *MARC
     todo: login
@@ -39,7 +38,6 @@ done: BOTON HOVER
 
 ?EXTRA
 TODO: Planform section onclick activar class active
-
 */
 
 @charset "utf-8";
@@ -102,13 +100,10 @@ body{
 
 h1{
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    /* text-transform: uppercase;
-    font-weight: bold; */
 }
 #velo{
     position: absolute;
     width: 100vw;
-    /* height: 700px; */
     z-index: -1;
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,0.5046393557422969) 64%, rgba(0,0,0,0.9416141456582633) 92%);
@@ -185,11 +180,7 @@ select{
         background-color: var(--bg-color);
         & h2{
             padding: 1rem 0;
-            font-size: 2.2rem ;
-            /* font-family: 'Yanone Kaffeesatz', sans-serif;
-            letter-spacing: 0.2rem;
-            font-weight: bold; */
-            
+            font-size: 2.2rem ;            
         }
         & p{
             font-size: 1.1rem;
@@ -276,9 +267,8 @@ select{
     }
     & .activa .contenido{
         padding: 1em;
-        height: auto; /*se puede poner auto */
+        height: auto;
     }
-    
     & .activa h3::before{
         content: '-';
     }
@@ -316,8 +306,6 @@ select{
     }
 }
 
-
-
 /**footer*/
 footer{
     flex: 0 0 auto;
@@ -352,17 +340,11 @@ footer{
         color: var(--soft-white);
 
     }
-    
     & small{
         padding-top: 25px;
         padding-bottom: 25px;
     }
 }
-
-
-
-
-
 
 /*btn*/
 .red-btn{
@@ -385,7 +367,7 @@ footer{
     background-color: var(--bg-signUp);
     color: #333333;
 }
-.signUp header{ /*header singup i plan arrelgat*/
+.signUp header{
     border-bottom: 1px solid #e6e6e6;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -566,11 +548,8 @@ footer{
             & div:last-of-type{
                 border-bottom: transparent;
             }
-    
         }
         & section:hover, .active section{
-            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-            /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         }
         & >p{
@@ -583,20 +562,6 @@ footer{
 }
 
 /** Login English */
-#sesion #background{
-    position: absolute;
-    width: 100vw;
-    height: 610px;
-    display: none;
-    z-index: -2;
-
-}
-#sesion #velo{
-    position: absolute;
-    width: 100vw;
-    height: 610px;
-    z-index: -1;
-}
 #sesion header{
     display: flex;
     align-items: start;
@@ -614,7 +579,7 @@ footer{
     & section{
         background-color: var(--bg-color);
         padding: 1rem;
-        margin: 1rem;
+        margin: auto;
     }
     & section h2{
         text-align: left;
@@ -780,12 +745,18 @@ footer{
             gap:2rem;
         }
     }
-    #sesion main{
+    #sesion section{
         width: 60%;
         margin: auto;
     }
-    #sesion #background{display: block;}
-
+    #sesion{
+        background-image: url(../img/Netflix-1280x720.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        & header, main{
+            background-color: #00000070;
+        }
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -861,7 +832,7 @@ footer{
     .signUp #main-plan{
       width: 55%;
     }
-    #sesion main{
+    #sesion section{
         width: 50%;
     }
 
@@ -911,7 +882,6 @@ footer{
 }
 
 @media only screen and (min-width: 2560px){
-
     .signUp #main-signUp {
         width: 800px;
     }
@@ -924,7 +894,7 @@ footer{
     :root{
         font-size: 32px;
     }
-    #sesion main{
+    #sesion section{
         width: 30%;
     }
 }
