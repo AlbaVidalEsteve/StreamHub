@@ -218,7 +218,7 @@ select{
     line-height: 2rem;
     border: none; /**añadir*/
     border-radius: 7px;
-    & h4{
+    & h2{
         font-size: 1.2rem;
     }
     & p{
@@ -517,11 +517,11 @@ footer{
                 border-radius: 8px;
 
                 border-radius: 8px;
-                & p:first-child{
+                & h4{
                     font-weight: bold;
                     color: var(--font-color);
                 }
-                & p:last-child{
+                & p{
                     font-weight: 0.5rem;
                     color: var(--font-color);
                 }
